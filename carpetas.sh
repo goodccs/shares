@@ -144,7 +144,7 @@ x=1
 		echo -n "Indique el nombre de la carpeta compartida en Terepaima:"
 		read carpeta
 		existe_carpeta $carpeta $usuario
-		line="//{servidor}/${carpeta} /home/${usuario}/${carpeta} smbfs username=${usuario},password=${clave},workgroup=corpivensa.gob.ve,rw 0 0"
+		line="//${servidor}/${carpeta} /home/${usuario}/${carpeta} smbfs username=${usuario},password=${clave},workgroup=corpivensa.gob.ve,rw 0 0"
 		cecho "se agrego ${line} a fstab" $green	
 		echo $line >> /etc/fstab
     	   x=$(( $x + 1 ))
